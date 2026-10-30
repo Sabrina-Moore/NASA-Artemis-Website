@@ -1,11 +1,12 @@
 import React from 'react';
+import { Box, Typography, List, ListItem } from '@mui/material';
 
 const HomePage = () => {
     return (
-        <div>
-            <h1>This is the home page for now!</h1>
-            <h2>:3</h2>
-        </div>
+        <Box>
+            <Typography>This is the home page for now!</Typography>
+            <Typography>:3</Typography>
+        </Box>
     );
 };
 
