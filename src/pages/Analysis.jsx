@@ -1,4 +1,5 @@
 import React from 'react';
+//for later analysis
 
 const AnalysisPage = () => {
     return (
