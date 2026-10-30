@@ -19,9 +19,9 @@ const [error, setError] = useState(null);
 
     async function load() {
       const { data, error } = await supabase
-        .from("missions")
+        .from("Apollo-missions")
         .select(
-          "id, mission_name, expected_launch, actual_launch, mission_description, success, takeaways"
+          "mission_id, mission_name, mission_category, expected_launch, actual_launch, mission_description, success, takeaway"
         )
         .order("expected_launch", { ascending: true });
 

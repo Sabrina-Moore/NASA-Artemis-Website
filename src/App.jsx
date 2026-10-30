@@ -70,7 +70,7 @@ return (
               fontSize: '0.75rem',
               fontWeight: 'bold',
               letterSpacing: '1.5px',
-              color: '#c5a880', // Classic Apollo Parchment
+              color: '#c5a880', 
               borderColor: '#c5a880',
               borderRadius: '2px',
               px: 2,
@@ -91,7 +91,7 @@ return (
               fontSize: '0.75rem',
               fontWeight: 'bold',
               letterSpacing: '1.5px',
-              color: '#c5a880', // Classic Apollo Parchment
+              color: '#c5a880',
               borderColor: '#c5a880',
               borderRadius: '2px',
               px: 2,
@@ -113,7 +113,7 @@ return (
               fontSize: '0.75rem',
               fontWeight: 'bold',
               letterSpacing: '1.5px',
-              color: '#c5a880', // Classic Apollo Parchment
+              color: '#c5a880',
               borderColor: '#c5a880',
               borderRadius: '2px',
               px: 2,
