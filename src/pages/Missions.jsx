@@ -28,7 +28,7 @@ const [error, setError] = useState(null);
         .select(
           "mission_id, mission_name, mission_category, expected_launch, actual_launch, mission_description, success, takeaway"
         )
-        .order("expected_launch", { ascending: true });
+        .order("mission_id", { ascending: true });
 
       if (cancelled) return;
       if (error) setError(error.message);

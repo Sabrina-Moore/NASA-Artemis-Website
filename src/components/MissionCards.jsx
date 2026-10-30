@@ -42,13 +42,16 @@ const valueSx = {
 
 
 const getStatus = (success) => {
-  if (success === "success") return { label: "Success", color: SUCCESS_GREEN };
-  if (success === "failed") return { label: "Failure", color: FAILURE_RED };
-  if (success === "cancelled") return { label: "Cancelled", color: FAILURE_RED };
+  if (success === "Success") return { label: "Success", color: SUCCESS_GREEN };
+  if (success === "Failed") return { label: "Failure", color: FAILURE_RED };
+  if (success === "Cancelled") return { label: "Cancelled", color: FAILURE_RED };
   return { label: "Cancelled", color: PARCHMENT };
 };
 
-function DateCell({ label, value, pendingText = "Pending" }) {
+//need to sort 
+
+
+function DateCell({ label, value, pendingText = "N/A" }) {
   const formatted = formatDate(value);
   return (
     <Box>
