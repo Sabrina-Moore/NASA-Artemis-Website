@@ -3,9 +3,9 @@ import { AppBar, Toolbar, Typography, Container, Box, Button } from '@mui/materi
 
 import './App.css'
 
-
-import Home from './pages/Home.jsx';
+import HomePage from './pages/Home.jsx';
 import Analysis from './pages/Analysis.jsx';
+import Missions from './pages/Missions.jsx';
 
 
 //make this page be for page navigation and nav bar
@@ -51,12 +51,12 @@ return (
               textTransform: 'uppercase',
               width: '120px',
             }}
-          > Title
+          > 
             {currentPage === "dashboard"
               ? "HOME"
               : currentPage === "analysis"
               ? "ANALYSIS"
-              : "DEFAULT"}
+              : "Missions"}
              <span style={{ color: '#45f3ff', fontSize: '0.8rem' }}></span>
           </Typography>
 
@@ -70,7 +70,7 @@ return (
               fontSize: '0.75rem',
               fontWeight: 'bold',
               letterSpacing: '1.5px',
-              color: '#c5a880', // Classic Apollo Parchment
+              color: '#c5a880', 
               borderColor: '#c5a880',
               borderRadius: '2px',
               px: 2,
@@ -82,6 +82,27 @@ return (
                 boxShadow: '0 0 10px rgba(197, 168, 128, 0.4)'
               }
             }}> Home </Button>
+
+            <Button 
+              variant={currentPage == "missions" ? "contained" : "outlined"}
+              onClick={() => setCurrentPage("missions")}
+              sx={{ 
+              fontFamily: "'Space Grotesk', sans-serif",
+              fontSize: '0.75rem',
+              fontWeight: 'bold',
+              letterSpacing: '1.5px',
+              color: '#c5a880',
+              borderColor: '#c5a880',
+              borderRadius: '2px',
+              px: 2,
+              transition: 'all 0.2s ease-in-out',
+              '&:hover': { 
+                backgroundColor: '#c5a880', 
+                color: '#0b0c10',
+                borderColor: '#c5a880',
+                boxShadow: '0 0 10px rgba(197, 168, 128, 0.4)'
+              }
+            }}> Apollo Missions </Button>
     
 
              <Button 
@@ -92,7 +113,7 @@ return (
               fontSize: '0.75rem',
               fontWeight: 'bold',
               letterSpacing: '1.5px',
-              color: '#c5a880', // Classic Apollo Parchment
+              color: '#c5a880',
               borderColor: '#c5a880',
               borderRadius: '2px',
               px: 2,
@@ -111,8 +132,9 @@ return (
 
      {/* page content */}
      <Container maxWidth="xl" sx={{ mt: 4, mb: 4 }}>
-        {currentPage === "dashboard" && <Home />}
+        {currentPage === "dashboard" && <HomePage />}
         {currentPage === "analysis" && (<Analysis />)}
+        {currentPage === "missions" && (<Missions />)}
 
       </Container>
     </>
