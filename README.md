@@ -4,16 +4,22 @@
 Done with a code change?
 
 On your branch, website-dev, first add and commit your changes
+```sh
 git add . 
 git commit -m "Commit title"
+```
 
 Then pull from the github repo for the latest changes:
+```sh
 Git switch main
 Git pull origin main
 git switch website-dev
+```
 
 Finish pushing:
+```sh
 git push origin website-dev
+```
 
 Go to repo on website, and create the pull request
 
