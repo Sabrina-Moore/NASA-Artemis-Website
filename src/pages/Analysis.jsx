@@ -1,13 +1,11 @@
-import React from 'react';
-//for later analysis
+// page for showcasing data and images
+import { Box, Typography, List, ListItem } from '@mui/material';
 
-const AnalysisPage = () => {
+export default function Analysis (){
+
     return (
-        <div>
-            <h1>This is the Analysis page for now!</h1>
-            <h2>:P</h2>
-        </div>
-    );
-};
-
-export default AnalysisPage;
+        <Typography>
+            Analysis
+        </Typography>
+    )
+}

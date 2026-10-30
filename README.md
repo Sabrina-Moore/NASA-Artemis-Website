@@ -1,4 +1,25 @@
-# Immediate Installation
+# How to do commits and pushes/pulls
+
+<!-- Writing a comment here-->
+Done with a code change?
+
+On your branch, website-dev, first add and commit your changes
+git add . 
+git commit -m "Commit title"
+
+Then pull from the github repo for the latest changes:
+Git switch main
+Git pull origin main
+git switch website-dev
+
+Finish pushing:
+git push origin website-dev
+
+Go to repo on website, and create the pull request
+
+
+
+Immediate Installation
 
 Node.js - to have access to npm installs and React
 
@@ -12,9 +33,12 @@ npm create vite@latest - install vite to install react by npm
 
 follow instructions: 
 In installation: project-name -> React -> JavaScript ->ESLint -> Yes -> no to install and start now
+
+
 cd project-name
 npm install
 npm install @mui/material @emotion/react @emotion/styled
+npm install @supabase/supabase-js
 code . - opens folder in vs studio code
 npm run dev - to run demo inside new terminal
 
