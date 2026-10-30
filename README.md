@@ -1,4 +1,34 @@
+# Immediate Installation
+
+Node.js - to have access to npm installs and React
+
+
+In terminal
+
+Create directory inside your documents folder
+
+Inside directory:
+npm create vite@latest - install vite to install react by npm
+
+follow instructions: 
+In installation: project-name -> React -> JavaScript ->ESLint -> Yes -> no to install and start now
+cd project-name
+npm install
+npm install @mui/material @emotion/react @emotion/styled
+code . - opens folder in vs studio code
+npm run dev - to run demo inside new terminal
+
+
+
+
+
+
+
+
 # React + Vite
+
+
+
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
