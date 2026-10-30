@@ -4,6 +4,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 
+//make this page be for page navigation and nav bar
+
 function App() {
   const [count, setCount] = useState(0)
 
