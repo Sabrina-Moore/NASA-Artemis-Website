@@ -1,122 +1,120 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
+import React, { useState } from 'react'
+import { AppBar, Toolbar, Typography, Container, Box, Button } from '@mui/material'
+
 import './App.css'
+
+
+import Home from './pages/Home.jsx';
+import Analysis from './pages/Analysis.jsx';
+
 
 //make this page be for page navigation and nav bar
 
 function App() {
-  const [count, setCount] = useState(0)
+  
+  const [searchQuery, setSearchQuery] = useState(""); //search bar
+  const [currentPage, setCurrentPage] = useState("dashboard"); //default to home page
 
-  return (
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+     <AppBar
+     position="static"
+      sx={{ 
+      // Pitch-black terminal console color background
+      backgroundColor: '#0b0c10', 
+      // Rigid panel separation line across the bottom screen edge
+      borderBottom: '2px solid #394454', 
+      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.7)',
+      py: 0.5
+      }} >
+      <Container maxWidth="xl">
+        <Toolbar
+          sx={{ 
+          display: 'flex', 
+          justifyContent: 'space-between', 
+          alignItems: 'center',
+          px: { xs: 0, sm: 2 } 
+          }}>
 
-      <div className="ticks"></div>
+         {/*Title here inside typography */}
+          <Typography 
+            variant="h6" 
+            component="div" 
+            sx={{ 
+              fontFamily: "'Space Grotesk', sans-serif", 
+              fontWeight: 700, 
+              letterSpacing: '2px', 
+              color: '#ffffff',
+              textTransform: 'uppercase',
+              width: '120px',
+            }}
+          > Title
+            {currentPage === "dashboard"
+              ? "HOME"
+              : currentPage === "analysis"
+              ? "ANALYSIS"
+              : "DEFAULT"}
+             <span style={{ color: '#45f3ff', fontSize: '0.8rem' }}></span>
+          </Typography>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+          {/*Navigation pages */}
+          <Box>
+              <Button 
+              variant={currentPage == "dashboard" ? "contained" : "outlined"}
+              onClick={() => setCurrentPage("dashboard")}
+              sx={{ 
+              fontFamily: "'Space Grotesk', sans-serif",
+              fontSize: '0.75rem',
+              fontWeight: 'bold',
+              letterSpacing: '1.5px',
+              color: '#c5a880', // Classic Apollo Parchment
+              borderColor: '#c5a880',
+              borderRadius: '2px',
+              px: 2,
+              transition: 'all 0.2s ease-in-out',
+              '&:hover': { 
+                backgroundColor: '#c5a880', 
+                color: '#0b0c10',
+                borderColor: '#c5a880',
+                boxShadow: '0 0 10px rgba(197, 168, 128, 0.4)'
+              }
+            }}> Home </Button>
+    
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+             <Button 
+            variant={currentPage == "analysis" ? "contained" : "outlined"}
+            onClick={() => setCurrentPage("analysis")}
+              sx={{ 
+              fontFamily: "'Space Grotesk', sans-serif",
+              fontSize: '0.75rem',
+              fontWeight: 'bold',
+              letterSpacing: '1.5px',
+              color: '#c5a880', // Classic Apollo Parchment
+              borderColor: '#c5a880',
+              borderRadius: '2px',
+              px: 2,
+              transition: 'all 0.2s ease-in-out',
+              '&:hover': { 
+                backgroundColor: '#c5a880', 
+                color: '#0b0c10',
+                borderColor: '#c5a880',
+                boxShadow: '0 0 10px rgba(197, 168, 128, 0.4)'
+              }
+            }}> Analysis </Button>
+          </Box>
+        </Toolbar>
+      </Container>
+     </AppBar>
+
+     {/* page content */}
+     <Container maxWidth="xl" sx={{ mt: 4, mb: 4 }}>
+        {currentPage === "dashboard" && <Home />}
+        {currentPage === "analysis" && (<Analysis />)}
+
+      </Container>
     </>
   )
 }
