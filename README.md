@@ -1,46 +1,66 @@
-# How to do commits and pushes/pulls
+# Apollo Mission Site - An Educational Entry to Learning about Space
 
+## About the Project
+
+My team designed a React website in Visual Studio code that 
+
+
+## Purpose
+
+
+## Features
+
+
+
+## Tech Stack
+- React
+- Supabase
+- JavaScript
+
+
+## Running the App
+
+### Getting started
+
+
+
+### Contributions
+
+Before getting started, making sure that you have an IDE that can run JavaScript and react.
+
+1. Install Node.js
+2. 
+
+#### Getting started
+
+You will need to clone this project into a local directory/folder. 
+
+
+
+#### To make changes
 <!-- Writing a comment here-->
 Done with a code change?
 
-On your branch, website-dev, first add and commit your changes
+1. On your branch, first add and commit your files:
+```sh
+git status #confirm that you're on the right branch and which files have been modified
 git add . 
 git commit -m "Commit title"
+```
 
-Then pull from the github repo for the latest changes:
+2. (optional) For best practice, pull first from the repo before pushing your changes: 
+```sh
 Git switch main
 Git pull origin main
-git switch website-dev
+git switch branch-name
+```
 
-Finish pushing:
-git push origin website-dev
+3. Push your local changes to the repo:
+```sh
+git push origin branch-name
+```
 
-Go to repo on website, and create the pull request
-
-
-
-Immediate Installation
-
-Node.js - to have access to npm installs and React
-
-
-In terminal
-
-Create directory inside your documents folder
-
-Inside directory:
-npm create vite@latest - install vite to install react by npm
-
-follow instructions: 
-In installation: project-name -> React -> JavaScript ->ESLint -> Yes -> no to install and start now
-
-
-cd project-name
-npm install
-npm install @mui/material @emotion/react @emotion/styled
-npm install @supabase/supabase-js
-code . - opens folder in vs studio code
-npm run dev - to run demo inside new terminal
+4. Go to the GitHub repository page and create the pull request. Make a detailed description of what files you changed. 
 
 
 
