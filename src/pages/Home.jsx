@@ -1,23 +1,12 @@
-import { Box, Typography, List, ListItem } from '@mui/material';
+import React from 'react';
 
+const HomePage = () => {
+    return (
+        <div>
+            <h1>This is the home page for now!</h1>
+            <h2>:3</h2>
+        </div>
+    );
+};
 
-export default function Home() {
-  return (
-    <Box 
-      sx={{ 
-        color: '#ffffff', 
-        maxWidth: '800px', 
-        mx: 'auto', 
-        mt: 6, 
-        p: 4, 
-        borderLeft: '3px solid #45f3ff', 
-        background: 'rgba(31, 40, 51, 0.3)',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3)'
-      }}
-    >
-      <Typography variant="h4" gutterBottom sx={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 'bold' }}>
-        Main page
-      </Typography>
-    </Box>
-  );
-}
+export default HomePage;
