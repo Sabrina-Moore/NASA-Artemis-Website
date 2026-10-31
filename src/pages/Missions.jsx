@@ -30,7 +30,10 @@ const [error, setError] = useState(null);
       const { data, error } = await supabase
         .from("Apollo-missions")
         .select(
-          "mission_id, mission_name, mission_category, expected_launch, actual_launch, mission_description, success, takeaway"
+          `mission_id, mission_name, mission_category, expected_launch, actual_launch, mission_description, success, takeaway, mission_images (
+            id,
+            image_url
+          )`
         )
         .order("mission_id", { ascending: true });
 

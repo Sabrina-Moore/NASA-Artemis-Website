@@ -35,7 +35,8 @@ export default function HomePage() {
         "&:hover": { boxShadow: "0 0 10px rgba(197, 168, 128, 0.4)" }}}>
             <Typography
              sx={{ fontFamily: FONT,
-            fontSize: "40px",
+            fontWeight: 700,
+            fontSize: "30px",
             color: "#ffff",
             marginBottom: 2,
             }}>
@@ -64,7 +65,8 @@ export default function HomePage() {
 
             <Typography
              sx={{ fontFamily: FONT,
-            fontSize: "40px",
+            fontWeight: 700,
+            fontSize: "30px",
             color: "#ffff",
             marginBottom: 2,
             }}>
@@ -103,7 +105,8 @@ export default function HomePage() {
 
             <Typography
              sx={{ fontFamily: FONT,
-            fontSize: "40px",
+            fontWeight: 700,
+            fontSize: "30px",
             color: "#ffff",
             marginBottom: 2,
             }}>
@@ -133,7 +136,8 @@ export default function HomePage() {
 
             <Typography
              sx={{ fontFamily: FONT,
-            fontSize: "40px",
+            fontWeight: 700,
+            fontSize: "30px",
             color: "#ffff",
             marginBottom: 2,
             }}>
