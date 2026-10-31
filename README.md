@@ -2,21 +2,23 @@
 
 ## About the Project
 
-My team designed a React website in Visual Studio code that 
-
+My team designed a React website in Visual Studio code that fetches Apollo mission data from a backend server (Supabase) and dynamically renders into mission cards. Users can search the array of objects for mission name and category keywords. The App.jsx page uses dynamic page navigation with react states and the Homepage describes the website with supporting data.
 
 ## Purpose
-
+STEM pathways and educational performance have been declining. My team, Git to Orbit, wanted to contribute to filling that gap with this educational resource that allows students to have a simple and easy way to engage with Apollo missions. 
 
 ## Features
-
-
+- Supabase tables with data from NASA Apollo missions
+- Navigation bar
+- Dynamic page navigation
+- Search bar functionality
+- Dynamic card component rendering
+- Minimal data exploration
 
 ## Tech Stack
 - React
 - Supabase
 - JavaScript
-
 
 ## Running the App
 
@@ -34,7 +36,6 @@ Before getting started, making sure that you have an IDE that can run JavaScript
 #### Getting started
 
 You will need to clone this project into a local directory/folder. 
-
 
 
 #### To make changes
