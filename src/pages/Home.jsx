@@ -1,5 +1,15 @@
-import {Box, Typography} from '@mui/material';
-import LandingLocations from '../assets/images/LandingLocations.jpeg'
+import {Box, Stack, Typography} from '@mui/material';
+
+//analysis image import
+import PISA1 from '../assets/analysis/PISA-graph-1.png';
+import PISA3 from '../assets/analysis/PISA-graph-3.png';
+
+
+const pisaGraphs = [
+  { id: 1, src: PISA1, alt: "PISA Analysis Graph 1" },
+  { id: 3, src: PISA3, alt: "PISA Analysis Graph 3" },
+];
+
 
 const FONT = "'Space Grotesk', sans-serif";
 const PARCHMENT = "#c5a880";
@@ -34,8 +44,27 @@ export default function HomePage() {
         
             <Typography
             sx={styles.Text}>
-                This is an educational resource designed to provide k-12 students and teachers an easy entry point into learning about the Apollo missions from 1961 to 1972. By using this resource, we hope that it will encourage an interest in space missions. 
+                This is an educational resource designed to provide k-12 students and teachers an easy entry point into learning about the Apollo missions from 1961 to 1972. By using this resource, we hope that it will encourage an interest in space missions and exploration.  
             </Typography>
+            <Typography sx={styles.Text}>
+                According to the Programme for International Student Assessment (PISA), out of 91 countries participating in its studies,
+                literacy and numeracy performance in students has been dropping gradually since its peak around 2009. Science performance and spending are also linked, which higher spending improving overall science performance. Why does this matter? Lower science funding removes STEM pathways and overall disadvantages students from being able to perform, engage, and pursue science. 
+                This could also change where future science talent pools are globally, moving away from the United States as a research and STEM hub.
+            </Typography>
+            <Stack direction="row" spacing={1.5} sx={styles.graphRow}>
+            {pisaGraphs.map((graph) => (
+                <Box
+                key={graph.id}
+                component="img"
+                src={graph.src}
+                alt={graph.alt}
+                sx={styles.graphItem}
+                />
+            ))}
+            </Stack>
+
+
+
         </Box>
         
         <Box sx={styles.BoxOutline}>
@@ -126,5 +155,24 @@ BoxOutline: {
     mb: 3,
     transition: "all 0.2s ease-in-out",
     "&:hover": { boxShadow: "0 0 10px rgba(197, 168, 128, 0.4)" }
+},
+graphItem: {
+    width: 480,
+    height: 320,
+    objectFit: "contain", // keeps graph axes intact without cropping
+    borderRadius: "2px",
+    border: "1px solid #c5a880",
+    flexShrink: 0, // prevents flexbox from squishing images
+    transition: "transform 0.2s ease-in-out",
+    "&:hover": { transform: "scale(1.04)" },
+},
+graphRow: {
+    p: 1.5,
+    overflowX: "auto",
+    "&::-webkit-scrollbar": { height: "4px" },
+    "&::-webkit-scrollbar-thumb": {
+      backgroundColor: "rgba(197, 168, 128, 0.4)",
+      borderRadius: "2px",
+    },
 },
 }
