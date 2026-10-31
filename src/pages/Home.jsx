@@ -26,16 +26,7 @@ export default function HomePage() {
           sx={styles.Title}>
             NASA Apollo Missions
         </Typography>
-        <img
-            src = {LandingLocations}
-            alt = "Landing Locations"
-            sx = {{
-                width: '100%',
-                height:'auto',
-                display:'block',
-                marginBottom:'24px',
-            }}
-        />
+        
         <Box 
        sx={styles.BoxOutline}>
             <Typography sx={styles.Heading}>
@@ -72,11 +63,14 @@ export default function HomePage() {
                 Missions
             </Typography>
         
-            <Typography sx={styles.Text}>
-                Want to look at all of the Apollo missions or search for a specific one quickly?
-            </Typography>
-            <Typography sx={styles.Text}>
-                Missions contains rows of mission cards detailing each Apollo mission with data like the mission description, mission outcome (whether the mission was considered succesful, failed, or cancelled) and the takeaways from successful missions.
+            <Typography
+            sx={{ fontFamily: FONT,
+            fontSize: "18px",
+            color: "#ffff",
+            }}>
+                Browse all Apollo missions from 1961 to 1972, or search for a specific one on the Apollo missions Page.
+                Each mission card shows the mission name, dates, description, outcome (successful, failed, or cancelled), and key takeaways from successful missions.
+
             </Typography>
         </Box>
 
