@@ -7,6 +7,7 @@ const INK = "#0b0c10";
 
 export default function HomePage() {
 
+
     return(
         <>
         <Typography
