@@ -18,6 +18,7 @@ const INK = "#0b0c10";
 
 export default function HomePage() {
 
+
     return(
         <>
         <Typography
@@ -25,6 +26,16 @@ export default function HomePage() {
           sx={styles.Title}>
             NASA Apollo Missions
         </Typography>
+        <img
+            src = {LandingLocations}
+            alt = "Landing Locations"
+            sx = {{
+                width: '100%',
+                height:'auto',
+                display:'block',
+                marginBottom:'24px',
+            }}
+        />
         <Box 
        sx={styles.BoxOutline}>
             <Typography sx={styles.Heading}>
@@ -69,18 +80,37 @@ export default function HomePage() {
             </Typography>
         </Box>
 
-
-         <Box sx={styles.BoxOutline}>
+         <Box
+        sx={{
+        marginTop: 4,
+        backgroundColor: INK,
+        border: `1px solid ${PARCHMENT}`,
+        borderRadius: "2px",
+        p: 3,
+        mb: 3,
+        transition: "all 0.2s ease-in-out",
+        "&:hover": { boxShadow: "0 0 10px rgba(197, 168, 128, 0.4)" }}}>
 
             <Typography sx={styles.Heading}>
                Future Updates
             </Typography>
         
-            <Typography sx={styles.Text}>
-               ...
+            <Typography  
+            sx={{ fontFamily: FONT,
+            fontSize: "18px",
+            color: "#ffff",
+            }}>
+                Expand the missions to include:
+                Mercury missions, which were the beginning of human space travel.
+                Gemini missions, which built on Mercury's lessons and developed the skills needed for Apollo.
+                Artemis missions, the modern successor to Apollo and the ongoing story of space exploration.
+                We would like to include an Analysis page where we explore the decline in STEM engagement 
+                among K-12 students and its impact on society. Using data exploration and visualizations, 
+                we examine why students are falling behind in STEM subjects and what can be done to improve 
+                STEM education pathways.
+
             </Typography>
         </Box>
-
 
     </>
     )
